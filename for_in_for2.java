@@ -1,16 +1,19 @@
 import java.util.Scanner;
+//Implement a program to find all Pythagorean triples (a, b, c) where a^2 + b^2 = c^2 and a, b, c <= 20.
 
-//Write a program to print a right-angled triangle pattern of * using nested for loops.
 public class for_in_for2 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		for (int i = 1; i <= 5; i++) { // Outer loop for rows
-			for (int j = 1; j <= i; j++) { // Inner loop for columns
-				System.out.print("*"); // Print asterisks
-			}
-			System.out.println(); // Move to the next line after each row
-		}
+        for (int a = 1; a <= 20; a++) {
+            for (int b = a; b <= 20; b++) { // Start b from a to avoid duplicate pairs
+                for (int c = b; c <= 20; c++) { // Start c from b to ensure c is the largest
+                    if (a * a + b * b == c * c) {
+                        System.out.println("(" + a + ", " + b + ", " + c + ")");
+                    }
+                }
+            }
+        }
 	}
 
 }

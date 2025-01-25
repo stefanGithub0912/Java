@@ -1,23 +1,25 @@
-
-//In the following projects you are gonna see exerscises that are from easy difficulty to get comfortable with the language
-//Write a program to check if a number is positive, negative, or zero using if statements.
-// I have studied the language in school so some stuff might be missing
 import java.util.Scanner;
-
+//Write a program to determine the type of a triangle (equilateral, isosceles or invalid) based on the lengths of its sides.
 public class if1 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		if (a == 0) {
-			System.out.println("Number is equal to 0");
-
-		} else if (a > 0) {
-			System.out.println("Number is bigger then 0");
-
-		} else {
-			System.out.println("Number is smaller then 0");
-		}
+		System.out.println("1va strana");
+    	int a = sc.nextInt();
+		System.out.println("2ra strana");
+    	int b = sc.nextInt();
+		System.out.println("3ta strana");
+    	int c = sc.nextInt();
+    	if (a + b > c && a + c > b && b + c > a) {
+    		System.out.println("Triangle is invalid");
+    	}else {
+    	if(a == b && a == c) {
+    		System.out.println("Triangle is equilateral");
+    	}
+    	if(a == b || b == c || a == c) {
+    		System.out.println("Triangle is isosceles");
+    	}
+    	}
 	}
 
 }

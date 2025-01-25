@@ -1,23 +1,32 @@
 import java.util.Scanner;
-//Write a program to find the largest of three numbers using if statements.
+//Create a simple calculator program that takes two numbers and an operator (+, -, *, /) as input and performs the corresponding operation.
 
 public class if2 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("First number");
 		int a = sc.nextInt();
+		
+		System.out.println("Choose function: * , / , + , - ");
+		char function = sc.next().charAt(0);
+		
+		System.out.println("Second number");
 		int b = sc.nextInt();
-		int c = sc.nextInt();
-		if (a > b && a > c) {
-			System.out.println("A(first number) is the largest");
-		}
-		if (b > a && b > c) {
-			System.out.println("B(second number) is the largest");
-		}
-		if (c > b && c > a) {
-			System.out.println("C(third number) is the largest");
-		}
 
+		
+		if(function == '*') {
+			System.out.println(a * b);
+		}
+		if(function == '+') {
+			System.out.println(a + b);	
+				}
+		if(function == '-') {
+			System.out.println(a - b);
+		}
+		if(function == '/') {
+			System.out.println(a / b);
+		}
 	}
 
 }
